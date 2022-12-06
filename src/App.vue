@@ -6,9 +6,7 @@
   <router-view/>
   <FirsctScreen />
   <div>
-    <my-dialog :show="true">
-    <post form 
-    @create="createPost"/></my-dialog>
+    
     <PostForm @create="createPost"/>
     <PostList v-bind:posts="posts"
     @remove="removePost"/> 
@@ -26,7 +24,7 @@ export default {
   components: {
     PostForm,
     PostList,
-    FirsctScreen,
+    FirsctScreen
   },
 
   data() {

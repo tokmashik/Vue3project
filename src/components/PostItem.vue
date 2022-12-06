@@ -5,10 +5,10 @@
             <div>Discription: {{ post.body }}</div>
         </div>
         
-            <button class="button"
+            <my-button
             @click="$emit('remove', post)">
                 Delete
-            </button>
+            </my-button>
         
    </div>
 
@@ -16,7 +16,11 @@
   </template>
   
   <script>
+  import MyButton from "@/components/UI/MyButton.vue"
   export default {
+    components: {
+      MyButton
+    },
     props: {
         post: {
             type: Object,

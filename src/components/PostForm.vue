@@ -2,7 +2,7 @@
     <div>
     <form @submit.prevent>
       <h4>Posts:</h4>
-      <input 
+      <input
       v-model="post.title"
       class="input" 
       type="text" 
@@ -13,16 +13,21 @@
       class="input" type="text" 
       placeholder="Discription"
       >
-      <button class="button" style=" margin-top: 15px; align-self: flex-end;"
+      <my-button style=" margin-top: 15px; align-self: flex-end;"
       @click="createPost"
-      >Add</button>
+      >Add</my-button>
     </form>
   </div>
 </template>
 
 <script>
-
+import MyButton from "@/components/UI/MyButton.vue"
+import MyInput from "@/components/UI/MyInput.vue"
 export default {
+    components: {
+    MyButton,
+    MyInput
+  },
     data() {
         return {
             post: {
